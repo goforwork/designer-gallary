@@ -1,0 +1,70 @@
+spring:
+  application:
+    name: designer-gallery
+  servlet:
+    multipart:
+      max-file-size: 10MB
+      max-request-size: 50MB
+
+server:
+  port: 8080
+
+logging:
+  file:
+    path: /home/logs/designer-gallery
+
+designer:
+  storage:
+    data-dir: ${DESIGNER_DATA_DIR:${user.home}/.toolbox/designer-gallery}
+  web-dist:
+    user-dir: ${DESIGNER_USER_WEB_DIST_DIR:designerWebDist}
+    admin-dir: ${DESIGNER_ADMIN_WEB_DIST_DIR:designerAdminDist}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: test
+  application:
+    name: designer-gallery-test
+
+server:
+  port: 8081
+
+logging:
+  file:
+    path: /home/logs/designer-gallery
+
+designer:
+  storage:
+    data-dir: ${DESIGNER_DATA_DIR:${user.home}/.toolbox/designer-gallery}
+  web-dist:
+    user-dir: ${DESIGNER_USER_WEB_DIST_DIR:designerWebDist}
+    admin-dir: ${DESIGNER_ADMIN_WEB_DIST_DIR:designerAdminDist}
+
+---
+spring:
+  config:
+    activate:
+      on-profile: online
+  application:
+    name: designer-gallery
+
+server:
+  port: 80
+  error:
+    include-stacktrace: never
+    include-message: never
+    include-binding-errors: never
+    include-exception: false
+
+logging:
+  file:
+    path: ${DESIGNER_LOG_DIR:/opt/designer-gallery/logs}
+
+designer:
+  storage:
+    data-dir: ${DESIGNER_DATA_DIR:/opt/designer-gallery/data}
+  web-dist:
+    user-dir: ${DESIGNER_USER_WEB_DIST_DIR:designerWebDist}
+    admin-dir: ${DESIGNER_ADMIN_WEB_DIST_DIR:designerAdminDist}

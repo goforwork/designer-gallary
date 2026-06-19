@@ -1,0 +1,22 @@
+[Unit]
+Description=Designer Gallery Website
+After=network.target
+
+[Service]
+Type=simple
+User=ubuntu
+Group=ubuntu
+WorkingDirectory=/opt/designer-gallery/app
+EnvironmentFile=/opt/designer-gallery/app/.env
+ExecStart=/usr/bin/java -jar /opt/designer-gallery/app/toolbox-0.0.1-SNAPSHOT.jar --spring.profiles.active=online
+Restart=on-failure
+RestartSec=10
+
+# 安全与资源限制
+NoNewPrivileges=true
+ProtectSystem=strict
+ProtectHome=true
+ReadWritePaths=/opt/designer-gallery
+
+[Install]
+WantedBy=multi-user.target

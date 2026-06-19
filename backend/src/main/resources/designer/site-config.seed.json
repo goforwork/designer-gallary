@@ -1,0 +1,34 @@
+{
+  "siteTitle": "林间设计工作室",
+  "siteDescription": "独立设计师作品集 - 品牌、UI、插画、印刷品",
+  "brandName": "林间",
+  "contactEmail": "hello@linjiandesign.com",
+  "contactPhone": "+86 138 0000 0000",
+  "socialLinks": [
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com"
+    },
+    {
+      "name": "Behance",
+      "url": "https://behance.net"
+    },
+    {
+      "name": "小红书",
+      "url": "https://xiaohongshu.com"
+    }
+  ],
+  "footerText": "© 2025 林间设计工作室 · 保留所有权利",
+  "adminUsername": "admin",
+  "adminPassword": "admin123",
+  "heroConfig": {
+    "eyebrow": "独立设计工作室",
+    "titleLine": "用视觉讲述",
+    "titleEmphasis": "品牌的故事",
+    "subtitleLine1": "品牌设计 · UI/UX · 插画 · 印刷品",
+    "subtitleLine2": "让每一次呈现都恰到好处",
+    "backgroundMedia": "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?w=1920&q=80",
+    "ctaText": "浏览作品",
+    "ctaTarget": "#works"
+  }
+}
