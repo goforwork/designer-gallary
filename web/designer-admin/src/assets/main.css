@@ -1,0 +1,14 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-pale-bg text-charcoal antialiased;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+input,
+textarea,
+select {
+  @apply text-charcoal;
+}
